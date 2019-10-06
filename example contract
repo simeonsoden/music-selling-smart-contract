@@ -1,0 +1,19 @@
+pragma solidity ^0.5.1;
+
+
+contract artistCONTRACT2{
+
+event senderLogger(address);
+event valueLogger(uint256);
+
+
+function () external payable { 
+emit senderLogger(msg.sender);
+emit valueLogger(msg.value);
+//record label
+0x445b5f277D463122a2Aaeac8B77d8f60865156Dc.transfer(msg.value - ((msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10))); 
+//artist
+0x33F161ca55729c1839416B80b99453496583ca20.transfer((msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)+(msg.value / 10)); 
+}
+
+}
